@@ -40,8 +40,7 @@ const shopProductsReducer = (state = allproducts, action) => {
         modifiedProduct.quantity -= 1;
         newState = [...state];
       } else {
-        modifiedProduct.quantity -= 1;
-        newState = state.filter((item) => item.name !== selectedItem.name);
+        modifiedProduct.quantity = 0;
       }
       return (state = newState);
     default:
