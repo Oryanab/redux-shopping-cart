@@ -1,14 +1,14 @@
-export const increment = (price) => {
+export const increment = (product) => {
   return {
     type: "INCREMENT",
-    price: price,
+    product: product,
   };
 };
 
-export const decrement = (price) => {
+export const decrement = (product) => {
   return {
     type: "DECREMENT",
-    price: price,
+    product: product,
   };
 };
 

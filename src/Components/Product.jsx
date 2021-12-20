@@ -22,7 +22,7 @@ export default function Product({ product }) {
 
         <button
           onClick={() => {
-            dispatch(increment(product.price));
+            dispatch(increment(product));
             dispatch(removeProductsQuantity(product));
             dispatch(addProductsToCart(product, shortid.generate()));
           }}

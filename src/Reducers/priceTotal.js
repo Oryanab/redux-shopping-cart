@@ -1,10 +1,11 @@
 const totalPriceReducer = (state = 0, action) => {
-  const { price } = action;
+  const { product } = action;
   switch (action.type) {
     case "INCREMENT":
-      return (state += price);
+      return product.quantity > 0 ? (state += product.price) : (state += 0);
     case "DECREMENT":
-      return (state -= price);
+      return (state -= product.price);
+
     case "RESET_TOTAL":
       return (state = 0);
     default:

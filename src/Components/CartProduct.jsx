@@ -19,7 +19,7 @@ export default function CartProduct({ product }) {
         <button
           onClick={(e) => {
             dispatch(removeProductsFromCart(product));
-            dispatch(decrement(product.price));
+            dispatch(decrement(product));
             dispatch(addProductsQuantity(product));
           }}
           id={product.name}
